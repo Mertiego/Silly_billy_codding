@@ -15,7 +15,7 @@ public class Main3{
         String gidisDonus = scanner.next();
 
         if (gidisDonus.equalsIgnoreCase("Y")) {
-            toplam *= 0.8;  // %20 indirim
+            toplam *= 0.8;  
         }
 
         System.out.println("Yolcu kaç yaşında? ");
@@ -29,7 +29,7 @@ public class Main3{
             toplam *= 0.7;
         }
 
-        System.out.println("Toplam bilet ücreti: " + toplam + " TL");
+        System.out.println("Toplam bilet ücreti: " + toplam + " $");
 
         scanner.close();
     }
