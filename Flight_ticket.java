@@ -34,3 +34,40 @@ public class Main3{
         scanner.close();
     }
 }
+
+// Another work 
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        double km;
+        int age;
+        String roundTrip;
+        System.out.println("Please enter the distance:  ");
+        km = input.nextDouble();
+        km = km*10;
+        System.out.println("Please enterence passangers age: ");
+        age = input.nextInt();
+        if (age < 12 ){
+            km *= 0.5;
+            System.out.println(km);
+        }else if (12<= age && age <= 24){
+            km *= 0.9;
+        }else if (65 <age){
+            km *= 0.7;
+        }
+        System.out.print("Will it be round trip?\n('Y' or 'N'): ");
+        roundTrip = input.next();
+        while (true){
+            if (roundTrip.equalsIgnoreCase("Y")){
+                km *=0.8;
+            }else if (roundTrip.equalsIgnoreCase("N")){
+                break;
+            }
+            else{
+                System.out.print("Please enter valid option:  ");
+            }
+        }
+        System.out.print("Total bill: " + km);
+    }
+}
